@@ -4,47 +4,91 @@
 <head>
   <title>Krad's resume</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, ser-scalable=no">
 
-  <!-- 引入 Bootstrap -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <!-- 新 Bootstrap 核心 CSS 文件 -->
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
-  <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
-  <!--[if lt IE 9]>
-         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-      <![endif]-->
+  <!-- 可选的Bootstrap主题文件（一般不使用） -->
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
+
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <!--引入本地css-->
   <link href="./css/base.css" rel="stylesheet">
+
+  <!--引入本地js文件-->
+  <script src="./js/gogal.js"></script>
 </head>
 
 <body>
-  <div class="container-fluid">
+  <div class="container">
     <!--导航-->
-    <div id="nav">
-      <ul class="nav nav-pills nav-justified">
-        <li class="active navButton">
-          <a href="#section1">个人简介</a>
-        </li>
-        <li class="navButton">
-          <a href="#section2">工作技能</a>
-        </li>
-        <li class="navButton">
-          <a href="#section3">工作经历</a>
-        </li>
-        <li class="navButton">
-          <a href="#section4">项目经历</a>
-        </li>
-      </ul>
-    </div>
+    <nav class="navbar navbar-default" role="navigation" id="nav">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Krad的简历</a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="navButton dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">个人简介
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#section1">自我评价</a>
+                </li>
+                <li>
+                  <a href="#section2">综合能力</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navButton dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">工作技能
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#section3">项目管理</a>
+                </li>
+                <li>
+                  <a href="#section4">产品管理</a>
+                </li>
+                <li>
+                  <a href="#section5">前端技能</a>
+                </li>
+                <li>
+                  <a href="#section6">后端技能</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navButton">
+              <a href="#">工作经历</a>
+            </li>
+            <li class="navButton">
+              <a href="#">项目经历</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class="center-block" id=background>
       <!--标题-->
-      <h1 class="text-center">Krad Zhang的简历</h1>
+      <h1 class="text-center" id="title">Krad Zhang的简历</h1>
       <h3 class="text-center">不会PHP的前端工程师不是好的PM</h3>
       <!--段落1-->
-      <div class="artside center-block" id="section1">
+      <div class="artside center-block">
         <h2 class="text-center">个人简介</h2>
         <div class="center-block panel panel-defult" id="avater">
           <div class="panel-body">
@@ -55,7 +99,9 @@
           </div>
         </div>
         <div class="center-block panel panel-default selfInfo">
-          <h2 class="panel-heading text-center">自我评价</h2>
+          <div class="panel-heading">
+            <h2 class="panel-title text-center" id="section1">自我评价</h2>
+          </div>
           <div class="panel-body">
             <ul class="center-block">
               <li>具有良好的沟通技能和书面撰写能力，有强烈的团队意识和时间管理意识</li>
@@ -68,7 +114,9 @@
           </div>
         </div>
         <div class="center-block panel panel-default selfInfo">
-          <h2 class="panel-heading text-center">综合能力</h2>
+          <div class="panel-heading">
+            <h2 class="panel-title text-center" id="section2">综合能力</h2>
+          </div>
           <div class="panel-body">
             <ul class="center-block">
               <li>精通编写互联网产品结构图、流程图、原型及需求文档</li>
@@ -85,10 +133,12 @@
         </div>
       </div>
       <!--段落2-->
-      <div class="artside center-block" id="section2">
+      <div class="artside center-block">
         <h2 class="text-center">工作技能</h2>
         <div class="panel panel-default selfInfo center-block">
-          <h2 class="panel-heading text-center">项目管理</h2>
+          <div class="panel-heading">
+            <h2 class="panel-title text-center" id="section3">项目管理</h2>
+          </div>
           <ul class="center-block">
             <li class="center-block row">
               <p class="col-md-2">团队激励</p>
@@ -133,7 +183,9 @@
           </ul>
         </div>
         <div class="panel panel-default selfInfo center-block">
-          <h2 class="panel-heading text-center">产品管理</h2>
+          <div class="panel-heading">
+            <h2 class="panel-title text-center" id="section4">产品管理</h2>
+          </div>
           <ul class="center-block">
             <li class="center-block row">
               <p class="col-md-2">产品规划</p>
@@ -185,7 +237,9 @@
           </ul>
         </div>
         <div class="panel panel-default selfInfo center-block">
-          <h2 class="panel-heading text-center">前端技能</h2>
+          <div class="panel-heading">
+            <h2 class="panel-title text-center" id="section5">前端技能</h2>
+          </div>
           <ul class="center-block">
             <li class="center-block row">
               <p class="col-md-2">Html5</p>
@@ -227,7 +281,9 @@
           </ul>
         </div>
         <div class="panel panel-default selfInfo center-block">
-          <h2 class="panel-heading text-center">后端技能</h2>
+          <div class="panel-heading">
+            <h2 class="panel-title text-center" id="section6">后端技能</h2>
+          </div>
           <ul class="center-block">
             <li class="center-block row">
               <p class="col-md-2">Java</p>
@@ -261,26 +317,20 @@
         </div>
       </div>
       <!--段落3-->
-      <div class="artside center-block" id="section3">
-          <h2 class="text-center">工作经历</h2>
-          <p class="text-center">待填入</p>
+      <div class="artside center-block">
+        <h2 class="text-center">工作经历</h2>
+        <p class="text-center">待填入</p>
       </div>
       <!--段落4-->
-      <div class="artside center-block" id="section4">
-          <h2 class="text-center">项目经历</h2>
-          <p class="text-center">待填入</p>
+      <div class="artside center-block">
+        <h2 class="text-center">项目经历</h2>
+        <p class="text-center">待填入</p>
       </div>
     </div>
   </div>
   <div id="footer">
     <p class="text-center">2017 Design and code by Krad Zhang</p>
   </div>
-  <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <!-- 包括所有已编译的插件 -->
-  <script src="js/bootstrap.min.js"></script>
-  <!--引入本地js文件-->
-  <script src="./js/gogal.js"></script>
 </body>
 
 </html>
