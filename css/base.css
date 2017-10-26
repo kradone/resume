@@ -1,0 +1,64 @@
+#background{
+  background-color:#dddddd;
+  margin-top:200px;
+  width:95%;
+  border-radius:10px;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+}
+
+h1{
+  padding-top:50px;
+}
+h2{
+  padding-top:30px;
+  padding-bottom: 20px;
+  margin-top: 0px;
+}
+h3{
+  padding-top:20px;
+  color:#777777;
+}
+#avater{
+  width:95%;
+  margin-top: 30px;
+}
+#avater img{
+  width:98%;
+}
+#avater p{
+  padding-top:10px;
+  line-height:30px;
+}
+ul{
+  width:95%;
+  margin-top: 20px;
+}
+#nav{
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+}
+
+#nav ul{
+  margin-top: 0px;
+}
+
+.artside{
+  width: 95%;
+  background-color:#d1cfcf;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: #9b9999;
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+.selfInfo{
+  width:95%;
+}
+
+
