@@ -1,3 +1,7 @@
+body{
+  margin-top: 35px;
+}
+
 #background{
   background-color:#dddddd;
   border-radius:10px;
@@ -18,14 +22,6 @@
 #avater p{
   padding-top:10px;
   line-height:30px;
-}
-
-#nav{
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  width: 100%;
 }
 
 .artside{
