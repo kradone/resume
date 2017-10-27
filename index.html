@@ -23,12 +23,16 @@
 
   <!--引入本地js文件-->
   <script src="./js/gogal.js"></script>
+
+  <!--引入Font Awesome 图标-->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
   <div class="container">
     <!--导航-->
-    <nav class="navbar navbar-default navbar-fixed-top" id="navbar-example" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar-example" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".bs-js-navbar-scrollspy">
@@ -47,10 +51,13 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="#section1">自我评价</a>
+                  <a href="#section-1-1">身份信息</a>
                 </li>
                 <li>
-                  <a href="#section2">综合能力</a>
+                  <a href="#section-1-2">自我评价</a>
+                </li>
+                <li>
+                  <a href="#section-1-3">综合能力</a>
                 </li>
               </ul>
             </li>
@@ -60,16 +67,16 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="#section3">项目管理</a>
+                  <a href="#section-2-1">项目管理</a>
                 </li>
                 <li>
-                  <a href="#section4">产品管理</a>
+                  <a href="#section-2-2">产品管理</a>
                 </li>
                 <li>
-                  <a href="#section5">前端技能</a>
+                  <a href="#section-2-3">前端技能</a>
                 </li>
                 <li>
-                  <a href="#section6">后端技能</a>
+                  <a href="#section-2-4">后端技能</a>
                 </li>
               </ul>
             </li>
@@ -83,62 +90,79 @@
         </div>
       </div>
     </nav>
-    <div class="center-block" id=background data-spy="scroll" data-target="#navbar-example" data-offset="100"
-    >
+    <div class="center-block" id=background data-spy="scroll" data-target="#navbar-example" data-offset="100">
       <!--标题-->
-      <h2 class="text-center" id="title">Krad Zhang的简历</h1>
-        <h4 class="text-center">不会PHP的前端工程师不是好的PM</h3>
-          <!--段落1-->
-          <div class="artside center-block">
-            <h3 class="text-center">个人简介</h2>
-      <div class="center-block panel panel-defult" id="avater">
-        <div class="panel-body">
-          <img src="http://getbootstrap.com/assets/img/bootstrap-stack.png" class="center-block img-thumbnail">
-          <p class="text-center">
-            我是一名7年工作经验的IT产品经理兼项目经理，软件工程出身，熟悉项目管理和前端语言，擅长制度建设和时间管理。
-          </p>
+      <h2 class="text-center" id="title">Krad Zhang的简历</h2>
+      <h4 class="text-center" id="subTitle">不会PHP的前端工程师不是好的PM</h4>
+      <!--段落1-->
+      <div class="artside center-block">
+        <h3 class="text-center">个人简介</h3>
+        <div class="center-block panel panel-default selfInfo">
+          <div class="panel-heading">
+            <h4 class="panel-title text-center" id="section-1-1">身份信息</h4>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-6 col-lg-6 col-xs-12">
+                <img src="./img/avater.png" class="center-block img-thumbnail" id="avater">
+                <h2 class="text-center">
+                  Krad Zhang
+                </h2>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xs-12">
+                <h4>年龄：28</h4>
+                <h4>工作：7年</h4>
+                <h4>专业：软件工程</h4>
+                <h4>职业：产品经理 and 项目经理</h4>
+                <h4>技能：原型设计|项目管理|前端开发</h4>
+              </div>
+            </div>
+            <a href="tel:13266513175">
+              <button class="btn btn-block btn-primary">
+                <i class="fa fa-mobile"></i>  Call me maybe</button>
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="center-block panel panel-default selfInfo">
-        <div class="panel-heading">
-          <h4 class="panel-title text-center" id="section1">自我评价</h2>
+        <div class="center-block panel panel-default selfInfo">
+          <div class="panel-heading">
+            <h4 class="panel-title text-center" id="section-1-2">自我评价</h4>
+          </div>
+          <div class="panel-body">
+            <ul class="center-block">
+              <li>具有良好的沟通技能和书面撰写能力，有强烈的团队意识和时间管理意识</li>
+              <li>责任心强，有奋斗意识，善于和技术及运营团队沟通，擅长进行工作总结和反省</li>
+              <li>重视工作流程和项目文档的梳理，习惯将工作制度化流程化，严格执行方案</li>
+              <li>注重吸取他人意见，不闭门造车，不做无意义的工作，避免沟通导致的工作效率低下</li>
+              <li>多次负责技术部门团队管理，重视新人职业素养培训和公司理念灌输</li>
+              <li>具备前端和后端技术基础，能有效和前端、后端、客户端、架构师等同事沟通</li>
+            </ul>
+          </div>
         </div>
-        <div class="panel-body">
-          <ul class="center-block">
-            <li>具有良好的沟通技能和书面撰写能力，有强烈的团队意识和时间管理意识</li>
-            <li>责任心强，有奋斗意识，善于和技术及运营团队沟通，擅长进行工作总结和反省</li>
-            <li>重视工作流程和项目文档的梳理，习惯将工作制度化流程化，严格执行方案</li>
-            <li>注重吸取他人意见，不闭门造车，不做无意义的工作，避免沟通导致的工作效率低下</li>
-            <li>多次负责技术部门团队管理，重视新人职业素养培训和公司理念灌输</li>
-            <li>具备前端和后端技术基础，能有效和前端、后端、客户端、架构师等同事沟通</li>
-          </ul>
+        <div class="center-block panel panel-default selfInfo">
+          <div class="panel-heading">
+            <h4 class="panel-title text-center" id="section-1-3">综合能力</h4>
+          </div>
+          <div class="panel-body">
+            <ul class="center-block">
+              <li>精通编写互联网产品结构图、流程图、原型及需求文档</li>
+              <li>精通撰写项目开发方案、需求文档、迭代方案、Bug补正方案</li>
+              <li>熟悉Html5、CSS3、Javascript等前端语言</li>
+              <li>熟练掌握苹果iOS应用和安卓应用开发流程及设计规范</li>
+              <li>熟练掌握B2B电商Web站及B2B后台开发流程及设计规范</li>
+              <li>熟练掌握O2O类商城APP及后台开发流程及设计规范</li>
+              <li>熟练掌握CRM、OA等企业内部定制系统开发流程</li>
+              <li>擅长项目进度管理、时间节点把控、项目质量控制</li>
+              <li>了解Java、php、apache、MySQL等后端语言结构及开发知识</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="center-block panel panel-default selfInfo">
-        <div class="panel-heading">
-          <h4 class="panel-title text-center" id="section2">综合能力</h2>
-        </div>
-        <div class="panel-body">
-          <ul class="center-block">
-            <li>精通编写互联网产品结构图、流程图、原型及需求文档</li>
-            <li>精通撰写项目开发方案、需求文档、迭代方案、Bug补正方案</li>
-            <li>熟悉Html5、CSS3、Javascript等前端语言</li>
-            <li>熟练掌握苹果iOS应用和安卓应用开发流程及设计规范</li>
-            <li>熟练掌握B2B电商Web站及B2B后台开发流程及设计规范</li>
-            <li>熟练掌握O2O类商城APP及后台开发流程及设计规范</li>
-            <li>熟练掌握CRM、OA等企业内部定制系统开发流程</li>
-            <li>擅长项目进度管理、时间节点把控、项目质量控制</li>
-            <li>了解Java、php、apache、MySQL等后端语言结构及开发知识</li>
-          </ul>
-        </div>
-      </div>
       </div>
       <!--段落2-->
       <div class="artside center-block">
         <h3 class="text-center">工作技能</h2>
           <div class="panel panel-default selfInfo center-block">
             <div class="panel-heading">
-              <h4 class="panel-title text-center" id="section3">项目管理</h2>
+              <h4 class="panel-title text-center" id="section-2-1">项目管理</h4>
             </div>
             <ul class="center-block workSkill">
               <li class="center-block row">
@@ -205,7 +229,7 @@
           </div>
           <div class="panel panel-default selfInfo center-block">
             <div class="panel-heading">
-              <h4 class="panel-title text-center" id="section4">产品管理</h2>
+              <h4 class="panel-title text-center" id="section-2-2">产品管理</h4>
             </div>
             <ul class="center-block workSkill">
               <li class="center-block row">
@@ -283,7 +307,7 @@
           </div>
           <div class="panel panel-default selfInfo center-block">
             <div class="panel-heading">
-              <h4 class="panel-title text-center" id="section5">前端技能</h2>
+              <h4 class="panel-title text-center" id="section-2-3">前端技能</h4>
             </div>
             <ul class="center-block workSkill">
               <li class="center-block row">
@@ -358,7 +382,7 @@
           </div>
           <div class="panel panel-default selfInfo center-block">
             <div class="panel-heading">
-              <h4 class="panel-title text-center" id="section6">后端技能</h2>
+              <h4 class="panel-title text-center" id="section-2-4">后端技能</h2>
             </div>
             <ul class="center-block workSkill">
               <li class="center-block row">
@@ -409,12 +433,12 @@
       </div>
       <!--段落3-->
       <div class="artside center-block">
-        <h3 class="text-center">工作经历</h2>
-          <p class="text-center">待填入</p>
+        <h3 class="text-center">工作经历</h3>
+        <p class="text-center">待填入</p>
       </div>
       <!--段落4-->
       <div class="artside center-block">
-        <h2 class="text-center">项目经历</h2>
+        <h3 class="text-center">项目经历</h3>
         <p class="text-center">待填入</p>
       </div>
     </div>
